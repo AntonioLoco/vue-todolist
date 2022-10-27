@@ -34,6 +34,8 @@ body{
 }
 
 .todo-form input{
+    width: 50%;
+    max-width: 450px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
@@ -64,6 +66,8 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
     border-bottom: 1px solid #252525;
 }
 
@@ -77,4 +81,9 @@ body{
 
 .todo-list li .delete-btn{
     cursor: pointer;
+}
+
+.todo-list li .check-icon{
+    font-size: 1.3rem;
+    color: aquamarine;
 }

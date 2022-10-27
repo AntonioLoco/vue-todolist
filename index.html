@@ -26,10 +26,16 @@
                 <p class="error-message" v-if="isError"><small>Attenzione inserisci almeno 5 caratteri!</small></p>
             </div>
             <div class="todo-list">
+                <p v-if="!toDoList.length">Inserisci qualcosa da fare!!!</p>
                 <ul>
                     <li v-for="(element, index) in toDoList">
-                        <span class="todo-item" :class=" (element.done) ? 'checked' : '' " @click="element.done = !element.done"> {{element.text}} </span>
+                        <span 
+                        class="todo-item" 
+                        :class=" (element.done) ? 'checked' : '' " 
+                        @click="element.done = !element.done" 
+                        > {{element.text}} </span>
                         <span class="delete-btn" @click="removeToDo(index)" v-if="!element.done">&#10060;</span>
+                        <span  class="check-icon" v-if="element.done">&#10004;</span>
                     </li>
                 </ul>
             </div>
