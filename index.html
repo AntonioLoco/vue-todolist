@@ -22,14 +22,14 @@
                 <!-- Form todo -->
                 <label for="user-todo"></label>
                 <input type="text" id="user-todo" placeholder="Aggiungi un'azione" v-model.trim="newTodo.text" @keyup.enter="addTodoUser">
-                <button @click="addTodoUser" >Aggiungi</button>
+                <button @click="addTodoUser">Aggiungi</button>
                 <p class="error-message" v-if="isError"><small>Attenzione inserisci almeno 5 caratteri!</small></p>
             </div>
             <div class="todo-list">
                 <ul>
                     <li v-for="(element, index) in toDoList">
-                        <span :class=" (element.done) ? 'checked' : '' " > {{element.text}} </span>
-                        <span class="delete-btn" @click="removeToDo(index)">&#10060;</span>
+                        <span class="todo-item" :class=" (element.done) ? 'checked' : '' " @click="element.done = !element.done"> {{element.text}} </span>
+                        <span class="delete-btn" @click="removeToDo(index)" v-if="!element.done">&#10060;</span>
                     </li>
                 </ul>
             </div>

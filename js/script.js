@@ -6,7 +6,6 @@ Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 
 
 Bonus:
-
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 */
 

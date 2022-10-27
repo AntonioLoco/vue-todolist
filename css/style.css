@@ -67,6 +67,10 @@ body{
     border-bottom: 1px solid #252525;
 }
 
+.todo-list .todo-item{
+    cursor: pointer;
+}
+
 .todo-list li span.checked{
     text-decoration: line-through;
 }
