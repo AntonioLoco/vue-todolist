@@ -20,7 +20,16 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
-            
+            toDoList: [
+                {
+                    text: "Fare colazione",
+                    done: false
+                },
+                {
+                    text: "Fare esercizio",
+                    done: false
+                }
+            ]
         }
     }
 }).mount("#app");

@@ -4,3 +4,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #252525;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Todo Form */
+.todo-form{
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.todo-form h1{
+    font-size: 2.5rem;
+    margin-bottom: .5em;
+    color: aquamarine;
+}
+
+.todo-form input,
+.todo-form button{
+    padding: .5em 1em;
+    border-style: none;
+}
+
+.todo-form input{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.todo-form button{
+    background-color: aquamarine;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Todo List */
+.todo-list{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 10px;
+    background-color: #616161;
+}
+
+
+.todo-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 1px solid #252525;
+}
+
+.todo-list li span.checked{
+    text-decoration: line-through;
+}
