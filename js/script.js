@@ -5,8 +5,6 @@ Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 - done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 
 
-MILESTONE 2
-Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
 MILESTONE 3
 Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
 Bonus:
@@ -19,6 +17,11 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            newTodo: {
+                text: "",
+                done: false
+            },
+            isError: null,
             toDoList: [
                 {
                     text: "Fare colazione",
@@ -34,6 +37,15 @@ createApp({
     methods: {
         removeToDo(indexOfTodo){
             this.toDoList.splice(indexOfTodo, 1);
+        },
+        addTodoUser(){
+            if(this.newTodo.text.length < 5){
+                this.isError = true;
+            } else {
+                this.toDoList.push({...this.newTodo});
+                this.newTodo.text = "";
+                this.isError = false;
+            }
         }
     }
 }).mount("#app");
