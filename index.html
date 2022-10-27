@@ -21,8 +21,8 @@
                 
                 <!-- Form todo -->
                 <label for="user-todo"></label>
-                <input type="text" id="user-todo" placeholder="Aggiungi un'azione" v-model.trim="newTodo.text">
-                <button @click="addTodoUser">Aggiungi</button>
+                <input type="text" id="user-todo" placeholder="Aggiungi un'azione" v-model.trim="newTodo.text" @keyup.enter="addTodoUser">
+                <button @click="addTodoUser" >Aggiungi</button>
                 <p class="error-message" v-if="isError"><small>Attenzione inserisci almeno 5 caratteri!</small></p>
             </div>
             <div class="todo-list">
