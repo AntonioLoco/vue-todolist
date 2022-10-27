@@ -28,7 +28,7 @@
                 <ul>
                     <li v-for="(element, index) in toDoList">
                         <span :class=" (element.done) ? 'checked' : '' " > {{element.text}} </span>
-                        <span>&#10060;</span>
+                        <span class="delete-btn" @click="removeToDo(index)">&#10060;</span>
                     </li>
                 </ul>
             </div>

@@ -66,3 +66,7 @@ body{
 .todo-list li span.checked{
     text-decoration: line-through;
 }
+
+.todo-list li .delete-btn{
+    cursor: pointer;
+}
